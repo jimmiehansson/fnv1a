@@ -27,7 +27,8 @@ function fnv1a(string) {
 	let hash = Number(FNV_OFFSETS[32]);
 	let isUnicoded = false;
 
-	for (let i = 0; i < string.length; i++) {
+  var i = 0;
+	for (i; i < string.length; i++) {
 		let characterCode = string.charCodeAt(i);
 
 		// Non-ASCII characters trigger the Unicode escape logic
@@ -55,7 +56,8 @@ function bigInt(string, {size = 32} = {}) {
 	// Handle Unicode code points > 0x7f
 	let isUnicoded = false;
 
-	for (let i = 0; i < string.length; i++) {
+  var i = 0;
+	for (i; i < string.length; i++) {
 		let characterCode = string.charCodeAt(i);
 
 		// Non-ASCII characters trigger the Unicode escape logic
